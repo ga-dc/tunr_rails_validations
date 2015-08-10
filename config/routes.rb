@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root to: 'artists#index'
-
-  resources :songs, only: [:index, :show]
+  get '/songs', to: 'songs#index'
   resources :artists do
     resources :songs
     resources :genres
